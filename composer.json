@@ -1,0 +1,40 @@
+{
+    "name": "born05/craft-csp",
+    "description": "Content Security Policy (or CSP) generator using nonces.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "content security policy",
+        "csp"
+    ],
+    "support": {
+        "docs": "https://github.com/born05/craft-csp/blob/master/README.md",
+        "issues": "https://github.com/born05/craft-csp/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Born05",
+            "homepage": "https://www.born05.com/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "born05\\contentsecuritypolicy\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Content Security Policy",
+        "handle": "content-security-policy",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/born05/craft-csp/master/CHANGELOG.md"
+    }
+}
