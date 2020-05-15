@@ -2,6 +2,8 @@
 
 Content Security Policy (or CSP) generator using nonces.
 
+Currently does not work in combination with `{% js %}` or `{% css %}` twig tags.
+
 ## Requirements
 
 - Craft 3.0.0
@@ -15,9 +17,8 @@ To install the plugin, search the plugin store for "Content Security Policy" or:
 ## Setting up
 
 Either config using `config/content-security-policy.php` or use nonces:
-```
+```twig
 <script src="url/of/script.js" nonce="{{ cspNonce('script-src') }}"></script>
-<link src="url/of/script.js" nonce="{{ cspNonce('script-src') }}"></script>
 <link href="url/of/style.css" rel="stylesheet" nonce="{{ cspNonce('style-src') }}" />
 ```
 
