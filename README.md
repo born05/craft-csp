@@ -20,6 +20,8 @@ Either config using `config/content-security-policy.php` or use nonces:
 ```twig
 <script src="url/of/script.js" nonce="{{ cspNonce('script-src') }}"></script>
 <link href="url/of/style.css" rel="stylesheet" nonce="{{ cspNonce('style-src') }}" />
+
+{% css inlineCSS with {nonce: cspNonce('style-src')} %}
 ```
 
 For config options see: [Settings.php](https://github.com/born05/craft-csp/blob/master/src/models/Settings.php)

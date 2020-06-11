@@ -57,6 +57,9 @@ class Plugin extends CraftPlugin
             }
         );
 
+        // Prevent loading when debug toolbar is on.
+        if (Craft::$app->getSession()->get('enableDebugToolbarForSite')) return;
+
         Event::on(
             View::class,
             View::EVENT_END_PAGE,
