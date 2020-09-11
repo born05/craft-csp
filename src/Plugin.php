@@ -10,6 +10,7 @@ use born05\contentsecuritypolicy\twigextensions\ContentSecurityPolicyTwigExtensi
 
 use Craft;
 use craft\base\Plugin as CraftPlugin;
+use craft\elements\User;
 use craft\web\View;
 use craft\web\twig\variables\CraftVariable;
 
@@ -58,7 +59,8 @@ class Plugin extends CraftPlugin
         );
 
         // Prevent loading when debug toolbar is on.
-        if (Craft::$app->users->getUserPreference(Craft::$app->user->id,'enableDebugToolbarForSite')) return;
+        $user = Craft::$app->getUser()->getIdentity();
+        if ($user instanceof User && $user->getPreference('enableDebugToolbarForSite')) return;
 
         Event::on(
             View::class,
