@@ -20,7 +20,7 @@ class Headers extends Component
 
         $csp = [];
 
-        if (!empty($settings->defaultSrc)) {
+        if (!empty($settings->baseUri)) {
             $csp['base-uri'] = $settings->baseUri;
         }
 
