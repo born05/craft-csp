@@ -87,12 +87,13 @@ class Settings extends Model
 }
 ```
 
-If using the SEOMatic plugin, nonces will be set for scripts added with that plugin and interfer with this plugin's configuration. You can disable this feature at `/admin/seomatic/plugin#tags` and re-enable the scripts with the following code:
+## Troubleshooting
+
+If using the SEOMatic plugin, nonces added by that plugin will interfer with this plugin's configuration. You can disable this feature at `/admin/seomatic/plugin#tags` and re-enable the scripts with the following code:
 
 ```twig
 {% do seomatic.script.get("googleAnalytics").nonce(cspNonce('script-src')) %}
 ```
-
 
 For config options see: [Settings.php](https://github.com/born05/craft-csp/blob/master/src/models/Settings.php)
 
