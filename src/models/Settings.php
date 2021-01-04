@@ -9,7 +9,7 @@ class Settings extends Model
     public $enabled = true;
     
     public $baseUri = [
-        "'self'"
+        "'none'"
     ];
     public $defaultSrc = [];
     public $scriptSrc = [

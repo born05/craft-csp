@@ -38,6 +38,9 @@ class Settings extends Model
 {
     public $enabled = true;
     
+    public $baseUri = [
+        "'none'"
+    ];
     public $defaultSrc = [];
     public $scriptSrc = [
         "'self'",
