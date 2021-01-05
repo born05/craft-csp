@@ -30,64 +30,38 @@ Example `config/content-security-policy.php`:
 ```php
 <?php
 
-namespace born05\contentsecuritypolicy\models;
+return [
+    'enabled' => true,
 
-use craft\base\Model;
-
-class Settings extends Model
-{
-    public $enabled = true;
-    
-    public $baseUri = [
-        "'none'"
-    ];
-    public $defaultSrc = [];
-    public $scriptSrc = [
+    'baseUri' => [
+        "'none'",
+    ],
+    'defaultSrc' => [],
+    'scriptSrc' => [
         "'self'",
-        // "'unsafe-inline'",
-        // "'unsafe-eval'",
-    ];
-    public $styleSrc = [
+    ],
+    'styleSrc' => [
         "'self'",
-    ];
-    public $imgSrc = [
+    ],
+    'imgSrc' => [
         "'self'",
-    ];
-    public $connectSrc = [];
-    public $fontSrc = [];
-    public $objectSrc = [];
-    public $mediaSrc = [];
-    public $frameSrc = [];
-    public $sandbox = [
-        // "'allow-forms'",
-        // "'allow-same-origin'",
-        // "'allow-scripts allow-popups'",
-        // "'allow-modals'",
-        // "'allow-orientation-lock'",
-        // "'allow-pointer-lock'",
-        // "'allow-presentation'",
-        // "'allow-popups-to-escape-sandbox'",
-        // "'allow-top-navigation'",
-    ];
-    public $reportUri = [];
-    public $childSrc = [];
-    public $formAction = [];
-    public $frameAncestors = [];
-    public $pluginTypes = [];
-    public $reportTo = [];
-    public $workerSrc = [
-        // 'blob:',
-    ];
-    public $manifestSrc = [];
-    public $navigateTo = [];
-
-    public function rules()
-    {
-        return [
-            [['enabled'], 'boolean'],
-        ];
-    }
-}
+    ],
+    'connectSrc' => [],
+    'fontSrc' => [],
+    'objectSrc' => [],
+    'mediaSrc' => [],
+    'frameSrc' => [],
+    'sandbox' => [],
+    'reportUri' => [],
+    'childSrc' => [],
+    'formAction' => [],
+    'frameAncestors' => [],
+    'pluginTypes' => [],
+    'reportTo' => [],
+    'workerSrc' => [],
+    'manifestSrc' => [],
+    'navigateTo' => [],
+];
 ```
 
 ## Troubleshooting
