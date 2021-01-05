@@ -17,6 +17,7 @@ To install the plugin, search the plugin store for "Content Security Policy" or:
 ## Setting up
 
 Either config using `config/content-security-policy.php` or use nonces:
+
 ```twig
 {# Regular html #}
 <script src="url/of/script.js" nonce="{{ cspNonce('script-src') }}"></script>
@@ -25,6 +26,53 @@ Either config using `config/content-security-policy.php` or use nonces:
 {# Twig tags #}
 {% css inlineCSS with {nonce: cspNonce('style-src')} %}
 {% js 'example.js' with {nonce: cspNonce('script-src')} %}
+```
+
+Example `config/content-security-policy.php`:
+
+```php
+<?php
+
+return [
+    'enabled' => true,
+
+    'baseUri' => [
+        "'none'",
+    ],
+    'defaultSrc' => [],
+    'scriptSrc' => [
+        "'self'",
+    ],
+    'styleSrc' => [
+        "'self'",
+    ],
+    'imgSrc' => [
+        "'self'",
+    ],
+    'connectSrc' => [],
+    'fontSrc' => [],
+    'objectSrc' => [],
+    'mediaSrc' => [],
+    'frameSrc' => [],
+    'sandbox' => [],
+    'reportUri' => [],
+    'childSrc' => [],
+    'formAction' => [],
+    'frameAncestors' => [],
+    'pluginTypes' => [],
+    'reportTo' => [],
+    'workerSrc' => [],
+    'manifestSrc' => [],
+    'navigateTo' => [],
+];
+```
+
+## Troubleshooting
+
+If using the SEOMatic plugin, nonces added by that plugin will interfer with this plugin's configuration. You can disable this feature at `/admin/seomatic/plugin#tags` and re-enable the scripts with the following code:
+
+```twig
+{% do seomatic.script.get("googleAnalytics").nonce(cspNonce('script-src')) %}
 ```
 
 For config options see: [Settings.php](https://github.com/born05/craft-csp/blob/master/src/models/Settings.php)
