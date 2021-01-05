@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.3.0 - 2021-01-05
+### Added
+- Added `base-uri` support. Thanks to @clarknelson
+
 ## 1.2.1.1 - 2020-11-03
 ### Fixed
 - Fixed composer.json for composer 2

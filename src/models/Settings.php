@@ -9,13 +9,11 @@ class Settings extends Model
     public $enabled = true;
     
     public $baseUri = [
-        "'none'"
+        "'none'",
     ];
     public $defaultSrc = [];
     public $scriptSrc = [
         "'self'",
-        // "'unsafe-inline'",
-        // "'unsafe-eval'",
     ];
     public $styleSrc = [
         "'self'",
@@ -28,26 +26,14 @@ class Settings extends Model
     public $objectSrc = [];
     public $mediaSrc = [];
     public $frameSrc = [];
-    public $sandbox = [
-        // "'allow-forms'",
-        // "'allow-same-origin'",
-        // "'allow-scripts allow-popups'",
-        // "'allow-modals'",
-        // "'allow-orientation-lock'",
-        // "'allow-pointer-lock'",
-        // "'allow-presentation'",
-        // "'allow-popups-to-escape-sandbox'",
-        // "'allow-top-navigation'",
-    ];
+    public $sandbox = [];
     public $reportUri = [];
     public $childSrc = [];
     public $formAction = [];
     public $frameAncestors = [];
     public $pluginTypes = [];
     public $reportTo = [];
-    public $workerSrc = [
-        // 'blob:',
-    ];
+    public $workerSrc = [];
     public $manifestSrc = [];
     public $navigateTo = [];
 
