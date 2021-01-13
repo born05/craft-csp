@@ -42,10 +42,10 @@ class Plugin extends CraftPlugin
 
         $settings = $this->getSettings();
 
-        if (!$this->isInstalled || !$settings->enabled || !Craft::$app->getRequest()->getIsSiteRequest()) return;
-
         // Add in our Twig extensions
         Craft::$app->view->registerTwigExtension(new ContentSecurityPolicyTwigExtension());
+        
+        if (!$this->isInstalled || !$settings->enabled || !Craft::$app->getRequest()->getIsSiteRequest()) return;
 
         // Register our variables
         Event::on(
