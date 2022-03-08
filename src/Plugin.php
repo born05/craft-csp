@@ -18,15 +18,9 @@ use yii\base\Event;
 
 class Plugin extends CraftPlugin
 {
-    /**
-     * @var ContentSecurityPolicy
-     */
-    public static $plugin;
+    public static Plugin $plugin;
 
-    /**
-     * @var string
-     */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     /**
      * Init the plugin.
@@ -62,8 +56,9 @@ class Plugin extends CraftPlugin
 
         // Prevent loading when debug toolbar is on.
         $user = Craft::$app->getUser()->getIdentity();
+        
         if ($user instanceof User && $user->getPreference('enableDebugToolbarForSite')) return;
-
+        
         Event::on(
             View::class,
             View::EVENT_END_PAGE,
@@ -80,7 +75,7 @@ class Plugin extends CraftPlugin
     /**
      * @inheritdoc
      */
-    protected function createSettingsModel()
+    protected function createSettingsModel(): Settings
     {
         return new Settings();
     }

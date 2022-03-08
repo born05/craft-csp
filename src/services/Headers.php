@@ -113,9 +113,10 @@ class Headers extends Component
 
         $cspValue = join('; ', $cspValues);
 
-        Craft::$app->response->headers->add('Content-Security-Policy', $cspValue . ';');
-        Craft::$app->response->headers->add('X-Content-Security-Policy', $cspValue . ';');
-        Craft::$app->response->headers->add('X-WebKit-CSP', $cspValue . ';');
+        Craft::$app->getResponse()->getHeaders()
+            ->set('Content-Security-Policy', $cspValue . ';')
+            ->set('X-Content-Security-Policy', $cspValue . ';')
+            ->set('X-WebKit-CSP', $cspValue . ';');
     }
 
     /**

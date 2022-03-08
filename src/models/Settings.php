@@ -37,7 +37,7 @@ class Settings extends Model
     public $manifestSrc = [];
     public $navigateTo = [];
 
-    public function rules()
+    public function rules(): array
     {
         return [
             [['enabled'], 'boolean'],

@@ -4,9 +4,10 @@ namespace born05\contentsecuritypolicy\twigextensions;
 
 use born05\contentsecuritypolicy\Plugin;
 
-use Craft;
+use Twig\TwigFunction;
+use Twig\Extension\AbstractExtension;
 
-class ContentSecurityPolicyTwigExtension extends \Twig_Extension
+class ContentSecurityPolicyTwigExtension extends AbstractExtension
 {
     /**
      * @return string
@@ -26,7 +27,7 @@ class ContentSecurityPolicyTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('cspNonce', [$this, 'registerNonce']),
+            new TwigFunction('cspNonce', [$this, 'registerNonce']),
         ];
     }
 
