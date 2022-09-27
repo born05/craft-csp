@@ -75,10 +75,10 @@ If using the SEOMatic plugin, nonces added by that plugin will interfer with thi
 {% do seomatic.script.get("googleAnalytics").nonce(cspNonce('script-src')) %}
 ```
 
-For config options see: [Settings.php](https://github.com/born05/craft-csp/blob/master/src/models/Settings.php)
+For config options see: [Settings.php](https://github.com/born05/craft-csp/blob/craft4/src/models/Settings.php)
 
 ## License
 
 Copyright © [Born05](https://www.born05.com/)
 
-See [license](https://github.com/born05/craft-csp/blob/master/LICENSE.md)
+See [license](https://github.com/born05/craft-csp/blob/craft4/LICENSE.md)

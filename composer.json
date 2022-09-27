@@ -11,7 +11,7 @@
         "csp"
     ],
     "support": {
-        "docs": "https://github.com/born05/craft-csp/blob/master/README.md",
+        "docs": "https://github.com/born05/craft-csp/blob/craft4/README.md",
         "issues": "https://github.com/born05/craft-csp/issues"
     },
     "license": "MIT",
@@ -35,6 +35,6 @@
         "handle": "content-security-policy",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/born05/craft-csp/master/CHANGELOG.md"
+        "changelogUrl": "https://raw.githubusercontent.com/born05/craft-csp/craft4/CHANGELOG.md"
     }
 }
