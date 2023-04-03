@@ -20,6 +20,8 @@ class Headers extends Component
 
         $csp = [];
 
+        $header = $settings->reportOnly ? 'Content-Security-Policy-Report-Only' : 'Content-Security-Policy';
+
         if (!empty($settings->baseUri)) {
             $csp['base-uri'] = $settings->baseUri;
         }
@@ -114,7 +116,7 @@ class Headers extends Component
         $cspValue = join('; ', $cspValues);
 
         Craft::$app->getResponse()->getHeaders()
-            ->set('Content-Security-Policy', $cspValue . ';');
+            ->set($header, $cspValue . ';');
     }
 
     /**

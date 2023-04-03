@@ -7,6 +7,8 @@ use craft\base\Model;
 class Settings extends Model
 {
     public $enabled = true;
+
+    public $reportOnly = false;
     
     public $baseUri = [
         "'none'",

@@ -35,6 +35,8 @@ Example `config/content-security-policy.php`:
 
 return [
     'enabled' => true,
+    
+    'reportOnly' => false,
 
     'baseUri' => [
         "'none'",
