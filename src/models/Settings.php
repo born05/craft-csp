@@ -1,6 +1,6 @@
 <?php
 
-namespace born05\contentsecuritypolicy\models;
+namespace roelvanhintum\contentsecuritypolicy\models;
 
 use craft\base\Model;
 
@@ -9,7 +9,7 @@ class Settings extends Model
     public $enabled = true;
 
     public $reportOnly = false;
-    
+
     public $baseUri = [
         "'none'",
     ];

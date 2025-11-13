@@ -1,12 +1,12 @@
 <?php
 
-namespace born05\contentsecuritypolicy;
+namespace roelvanhintum\contentsecuritypolicy;
 
-use born05\contentsecuritypolicy\services\Headers as HeadersService;
-use born05\contentsecuritypolicy\models\Settings;
+use roelvanhintum\contentsecuritypolicy\services\Headers as HeadersService;
+use roelvanhintum\contentsecuritypolicy\models\Settings;
 
-use born05\contentsecuritypolicy\variables\ContentSecurityPolicyVariable;
-use born05\contentsecuritypolicy\twigextensions\ContentSecurityPolicyTwigExtension;
+use roelvanhintum\contentsecuritypolicy\variables\ContentSecurityPolicyVariable;
+use roelvanhintum\contentsecuritypolicy\twigextensions\ContentSecurityPolicyTwigExtension;
 
 use Craft;
 use craft\base\Plugin as CraftPlugin;
@@ -40,7 +40,7 @@ class Plugin extends CraftPlugin
         Craft::$app->view->registerTwigExtension(new ContentSecurityPolicyTwigExtension());
 
         // Defer most setup tasks until Craft is fully initialized
-        Craft::$app->onInit(function() {
+        Craft::$app->onInit(function () {
             $settings = $this->getSettings();
             if (!$settings->enabled) return;
 
@@ -57,9 +57,9 @@ class Plugin extends CraftPlugin
 
             // Prevent loading when debug toolbar is on.
             $user = Craft::$app->getUser()->getIdentity();
-            
+
             if ($user instanceof User && $user->getPreference('enableDebugToolbarForSite')) return;
-            
+
             Event::on(
                 View::class,
                 View::EVENT_END_PAGE,

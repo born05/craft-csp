@@ -1,5 +1,5 @@
 {
-    "name": "born05/craft-csp",
+    "name": "roelvanhintum/craft-csp",
     "description": "Content Security Policy (or CSP) generator using nonces.",
     "type": "craft-plugin",
     "keywords": [
@@ -11,11 +11,15 @@
         "csp"
     ],
     "support": {
-        "docs": "https://github.com/born05/craft-csp/blob/craft4/README.md",
-        "issues": "https://github.com/born05/craft-csp/issues"
+        "docs": "https://github.com/roelvanhintum/craft-csp/blob/craft4/README.md",
+        "issues": "https://github.com/roelvanhintum/craft-csp/issues"
     },
     "license": "MIT",
     "authors": [
+        {
+            "name": "Roel van Hintum",
+            "homepage": "https://roel.vanhintum.eu/"
+        },
         {
             "name": "Born05",
             "homepage": "https://www.born05.com/"
@@ -25,9 +29,13 @@
         "php": "^8.0.2",
         "craftcms/cms": "^4.0.0-alpha|^5.0.0-beta.1"
     },
+    "require-dev": {
+        "craftcms/phpstan": "dev-main",
+        "squizlabs/php_codesniffer": "3.*"
+    },
     "autoload": {
         "psr-4": {
-          "born05\\contentsecuritypolicy\\": "src/"
+            "roelvanhintum\\contentsecuritypolicy\\": "src/"
         }
     },
     "extra": {
@@ -35,7 +43,7 @@
         "handle": "content-security-policy",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/born05/craft-csp/craft4/CHANGELOG.md"
+        "changelogUrl": "https://raw.githubusercontent.com/roelvanhintum/craft-csp/craft4/CHANGELOG.md"
     },
     "config": {
         "allow-plugins": {

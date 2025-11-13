@@ -1,8 +1,8 @@
 <?php
 
-namespace born05\contentsecuritypolicy\services;
+namespace roelvanhintum\contentsecuritypolicy\services;
 
-use born05\contentsecuritypolicy\Plugin;
+use roelvanhintum\contentsecuritypolicy\Plugin;
 
 use Craft;
 use craft\base\Component;
@@ -126,7 +126,8 @@ class Headers extends Component
      *
      * @return string
      */
-    public function registerNonce(string $type) {
+    public function registerNonce(string $type)
+    {
         $nonce = bin2hex(random_bytes(22));
         $this->nonces[$type][] = $nonce;
 

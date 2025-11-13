@@ -1,8 +1,8 @@
 <?php
 
-namespace born05\contentsecuritypolicy\twigextensions;
+namespace roelvanhintum\contentsecuritypolicy\twigextensions;
 
-use born05\contentsecuritypolicy\Plugin;
+use roelvanhintum\contentsecuritypolicy\Plugin;
 
 use Twig\TwigFunction;
 use Twig\Extension\AbstractExtension;

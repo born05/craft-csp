@@ -5,6 +5,7 @@ Content Security Policy (or CSP) generator using nonces.
 Currently does not work in combination with `{% js %}{% endjs %}` block code twig tags.
 
 ## Requirements
+
 - Craft 4.0.0 and up
 - PHP 8.0.2 and up
 
@@ -12,7 +13,7 @@ Currently does not work in combination with `{% js %}{% endjs %}` block code twi
 
 To install the plugin, search the plugin store for "Content Security Policy" or:
 
-`composer require born05/craft-csp`
+`composer require roelvanhintum/craft-csp`
 
 ## Setting up
 
@@ -35,7 +36,7 @@ Example `config/content-security-policy.php`:
 
 return [
     'enabled' => true,
-    
+
     'reportOnly' => false,
 
     'baseUri' => [
@@ -77,10 +78,4 @@ If using the SEOMatic plugin, nonces added by that plugin will interfer with thi
 {% do seomatic.script.get("googleAnalytics").nonce(cspNonce('script-src')) %}
 ```
 
-For config options see: [Settings.php](https://github.com/born05/craft-csp/blob/craft4/src/models/Settings.php)
-
-## License
-
-Copyright © [Born05](https://www.born05.com/)
-
-See [license](https://github.com/born05/craft-csp/blob/craft4/LICENSE.md)
+For config options see: [Settings.php](https://github.com/roelvanhintum/craft-csp/blob/craft4/src/models/Settings.php)

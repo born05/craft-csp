@@ -1,8 +1,8 @@
 <?php
 
-namespace born05\contentsecuritypolicy\variables;
+namespace roelvanhintum\contentsecuritypolicy\variables;
 
-use born05\contentsecuritypolicy\Plugin;
+use roelvanhintum\contentsecuritypolicy\Plugin;
 
 use Craft;
 
